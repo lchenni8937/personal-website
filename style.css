@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Space+Grotesk:wght@300..700&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
+
+:root {
+    --base-color: #ffe787;
+    --text-color: #000000;
+    --primary-color: #b073f5;
+    --secondary-color: #4666cf;
+    --header-color: #fff7b2;
+    --header-color-2: #c6fff9;
+    --header-color-3: #b2ffd0;
+}
+
+.darkmode {
+    --base-color: #130233;
+    --text-color: #ffffff;
+    --primary-color: #2255b4;
+    --secondary-color: #4666cf;
+    --header-color: #864bb6;
+    --header-color-2: #0f0052a8;
+    --header-color-3: #1e3b29;
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--header-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#theme-switch:hover {
+    scale: 1.25;
+}
+
+#theme-switch svg {
+    fill: var(--text-color);
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: TikTok Sans, 'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: var(--text-color);
+}
+
+body {
+    padding: 1em;
+    background-color: var(--base-color);
+}
+
+h1, h2, h3 {
+    font-family: Space Grotesk, TikTok Sans, 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+nav {
+    margin: 1em auto 3em auto;
+    width: min(1000px, 100%)
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2em;
+}
+
+nav li:first-child {
+     margin-right: auto; 
+     font-family: Sacramento, Space Grotesk, Tiktok Sans;
+     font-weight: bold;
+     font-size: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+header, section {
+    margin: 2em auto;
+    width: min(75em, 100%);
+    background-color: var(--header-color);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+header img {
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.text-container {
+    flex: 0 1 34em; 
+    color: var(--text-color);  
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.text-container p {
+    margin: .75em 0 1em 0;
+    font-size: 1.25rem;
+}
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    padding: .75em 1.25em;
+    border-radius: .5em;
+    font-weight: 600;
+}
+
+.cta-button:hover {
+    scale: 1.05;
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+section {
+    padding: 3em min(2em, 15%);
+    background-color: var(--header-color-2);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+section p {
+    margin-top: 1em;
+    font-size: 1.25rem;
+}
+
+section#pictures {
+    background-color: var(--header-color-2);
+}
+
+.grid-container {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "img-1 img-1 img-2 img-3"
+    "img-1 img-1 img-4 img-5";
+    gap: 1em;
+}
+
+.grid-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    transition: 100ms ease;
+}
+
+.grid-container img:hover {
+    scale: 1.15;
+}
+
+details {
+    margin-top: 1em;
+    background-color: var(--header-color);
+    border-radius: 1em;
+}
+
+details summary {
+    padding: 1em;
+    font-size: 1.7rem;
+    font-family: Space Grotesk, TikTok Sans, 'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: var(--text-color);
+}
+
+details p {
+    padding: 0 2em 2em 2em;
+    color: var(--text-color);
+}
+
+footer {
+    padding-bottom: 1.5em;
+    text-align: center;
+}
+
+footer a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media(max-width: 988px){
+    header {
+        text-align: center;
+    }
+
+    header .text-container {
+        padding-top: 0;
+    }
+}
+
+@media(max-width: 640px) {
+    nav li {
+        display: none;
+    }
+
+    nav li:first-child,
+    nav li:last-child {
+        display: block;
+    }
+
+    header {
+        margin-top: 0;
+    }
+
+    .cta-button {
+        margin-top: .5em;
+        width: 100%;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-container p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
