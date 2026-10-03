@@ -138,6 +138,7 @@ h1 {
 .text-container p {
     margin: .75em 0 1em 0;
     font-size: 1.25rem;
+    padding-bottom: 2%;
 }
 
 .cta-button {
